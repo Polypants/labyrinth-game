@@ -1,0 +1,154 @@
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+html, body {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+#renderCanvas {
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+}
+#startContainer {
+  overflow: hidden;
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(-45deg, #ffd400, #ff7300);
+}
+.startContainer_mobile, .startContainer_desktop {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 320px;
+  height: 360px;
+}
+.startContainer_mobile img, .startContainer_desktop img {
+  width: 40%;
+  max-width: 400px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  top: 0;
+}
+.startContainer_mobile p, .startContainer_desktop p {
+  font-size: 24px;
+  position: absolute;
+  bottom: 0;
+  padding: 10px;
+  line-height: 42px;
+  color: white;
+}
+.startContainer_mobile p {
+  text-align: center;
+  top: 0;
+}
+.body--isMobile .startContainer_mobile {
+  display: block;
+}
+.body--isDesktop .startContainer_desktop {
+  display: block;
+}
+#startContainer_startButton {
+  display: none;
+  width: 100%;
+  font-size: 28px;
+  padding: 1em 0;
+  background-color: white;
+  position: absolute;
+  bottom: 0%;
+  line-height: 50px;text-align: center;
+  cursor: pointer;
+  color: #ff7300;
+  text-align: center;
+}
+.body--isMobile #startContainer_startButton {
+  display: block;
+}
+#winContainer, #highScores {
+  width: 80vw;
+  height: 70vw;
+  z-index: 10;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  text-align: center;
+  cursor: default;
+  color: white;
+  transform: translate(-50%, -50%);
+}
+#winContainer {
+  display: none;
+}
+#highScores {
+  display: none;
+  background-color: green;
+  height: 100vw;
+  overflow-y: scroll;
+}
+#highScores h2 {
+  font-size: 7vw;
+}
+#highScoreList {
+  font-size: 7vw;
+  width: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 10vw;
+}
+#youWin {
+  height: 100%;
+  width: 100%;
+  background-color: green;
+  overflow-y: scroll;
+}
+#youWin h1 {
+  font-size: 13vw;
+}
+#youWin h2 {
+  font-size: 7vw;
+}
+#youWin input {
+  width: 80%;
+  font-size: 5em;
+}
+#youWin input::placeholder {
+  opacity: 0.3;
+}
+#submit {
+  height: 10vw;
+  width: 100%;
+  background-color: lightblue;
+  line-height: 10vw;
+  font-size: 7vw;
+  position: absolute;
+  bottom: -10vw;
+}
+#requiredFieldWarning {
+  display: none;
+  color: pink;
+  font-size: 7vw;
+  margin: 0;
+  margin-bottom: 1vw;
+}
+#playAgainButton {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  font-size: 10vh;
+  text-align: center;
+  color: white;
+  background-color: lightblue;
+  cursor: default;
+}
