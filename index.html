@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta name="theme-color" content="#ffffff" />
+  <meta name="theme-color" content="#ff7300" />
   <title>Wood Labyrinth</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
@@ -11,14 +11,14 @@
   <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-database.js"></script>
 </head>
-<body>
+<body class="body--isDesktop">
   <div id="startContainer">
     <div class="startContainer_mobile">
       <p>Get the ball to the green spot as quickly as possible. When you're ready, press start.</p>
     </div>
     <div class="startContainer_desktop">
       <img src="assets/gyro.svg" alt="gyroscope icon">
-      <p>To play this game, you’ll need a gyroscope enabled device. (Most Phones have them)</p>
+      <p>To play this game, you’ll need a gyroscope enabled device.</p>
     </div>
     <div id="startContainer_startButton">Start</div>
   </div>
@@ -26,10 +26,13 @@
     <div id="youWin">
       <h1>Complete!</h1>
       <h2>Your Score: <span id='scoreContainer'></span></h2>
-      <h3 id="requiredFieldWarning">*name is required*</h3>
-      <input id="nameInput" type="text" placeholder="Your Name" />
+      <div id="ifHighScore">
+        <h3 id="requiredFieldWarning">*Initials are required*</h3>
+        <input maxlength="3" id="nameInput" type="text" placeholder="Your Initials" />
+      </div>
     </div>
     <div id="submit">Submit Score</div>
+    <div id="viewHighScores">High Scores</div>
   </div>
   <div id="highScores">
     <h2>Highscores</h2>

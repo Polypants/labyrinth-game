@@ -119,17 +119,19 @@ html, body {
   font-size: 7vw;
 }
 #youWin input {
-  width: 80%;
-  font-size: 5em;
+  width: 40%;
+  font-size: 4vw;
+  height: 8vw;
+  text-align: center;
 }
 #youWin input::placeholder {
   opacity: 0.3;
 }
-#submit {
-  height: 10vw;
+#submit, #viewHighScores {
+  height: 15vw;
   width: 100%;
   background-color: lightblue;
-  line-height: 10vw;
+  line-height: 15vw;
   font-size: 7vw;
   position: absolute;
   bottom: -10vw;
@@ -151,4 +153,7 @@ html, body {
   color: white;
   background-color: lightblue;
   cursor: default;
+}
+#ifHighScore {
+  display: none;
 }
